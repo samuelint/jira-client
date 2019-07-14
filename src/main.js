@@ -1,5 +1,6 @@
 const minimist = require("minimist");
 const { setIssueFixVersionAndCreateFixVersion } = require("./service/jira-issues-service");
+const { extractIssuesFromCurrentBranch } = require("./service/jira-git-service");
 
 const argv = process.argv.slice(2);
 
@@ -10,16 +11,23 @@ async function main(command, arguments) {
   const {user,pass} = arguments;
   const auth = {user, pass};
 
+  let returnValue = "";
+
   switch(command) {
     case "setIssueFixVersion":
         const {issueKey, fixVersion} = arguments;
-        setIssueFixVersionAndCreateFixVersion(auth, issueKey, fixVersion);
+        returnValue = await setIssueFixVersionAndCreateFixVersion(auth, issueKey, fixVersion);
+      break;
+
+    case "extractIssuesFromCurrentBranch":
+        returnValue = await extractIssuesFromCurrentBranch();
       break;
 
     default:
       throw new Error(`Unrecognized command <${command}>.`)
-      break;
   }
+
+  console.log(returnValue);
 }
 
 try {
