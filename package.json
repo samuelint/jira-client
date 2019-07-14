@@ -10,6 +10,7 @@
     "bundle-linux-x86": "pkg src/main.js -o out/jira-client-linux-x86 -t linux-x86"
   },
   "dependencies": {
+    "lodash": "^4.17.13",
     "isomorphic-git": "^0.55.5",
     "minimist": "^1.2.0",
     "request": "^2.88.0",
