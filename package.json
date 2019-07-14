@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "bundle-macos": "pkg src/main.js -o out/jira-client-mac -t macos",
-    "bundle-linux-x64": "pkg src/main.js -o out/jira-client-linux-x64 -t linux-x64",
-    "bundle-linux-x86": "pkg src/main.js -o out/jira-client-linux-x86 -t linux-x86"
+    "bundle-linux-x64": "pkg src/main.js -o out/jira-client-linux-x64 -t linux-x64"
   },
   "dependencies": {
     "lodash": "^4.17.13",
