@@ -1,4 +1,4 @@
-#CI Jira Client
+# CI Jira Client
 
 Simple jira client for use in CI.
 
