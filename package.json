@@ -5,7 +5,9 @@
   "author": "Samuel Richard Magny",
   "license": "MIT",
   "scripts": {
-    "bundle": "pkg src/main.js -o out/jira-client"
+    "bundle-macos": "pkg src/main.js -o out/jira-client-mac -t macos",
+    "bundle-linux-x64": "pkg src/main.js -o out/jira-client-linux-x64 -t linux-x64",
+    "bundle-linux-x86": "pkg src/main.js -o out/jira-client-linux-x86 -t linux-x86"
   },
   "dependencies": {
     "minimist": "^1.2.0",
@@ -13,6 +15,6 @@
     "request-promise-native": "^1.0.7"
   },
   "devDependencies": {
-    "pkg": "^4.4.0"
+    "pkg": "4.3.8"
   }
 }

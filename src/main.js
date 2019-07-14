@@ -15,6 +15,10 @@ async function main(command, arguments) {
         const {issueKey, fixVersion} = arguments;
         setIssueFixVersionAndCreateFixVersion(auth, issueKey, fixVersion);
       break;
+
+    default:
+      throw new Error(`Unrecognized command <${command}>.`)
+      break;
   }
 }
 
