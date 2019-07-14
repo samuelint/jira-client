@@ -10,14 +10,11 @@ async function updateIssueFixVersion(auth, issueKey, fixVersion) {
 }
 
 async function setIssueFixVersionAndCreateFixVersion(auth, issueKey, fixVersion) {
-  try {
-    const projectKey = issueKey.split("-")[0];
-    await createFixVersionIfDoNotExist(auth, projectKey, fixVersion);
-    await updateIssueFixVersion(auth, issueKey, fixVersion);
+  const projectKey = issueKey.split("-")[0];
+  await createFixVersionIfDoNotExist(auth, projectKey, fixVersion);
+  await updateIssueFixVersion(auth, issueKey, fixVersion);
 
-  } catch(error) {
-    console.error(error);
-  }
+  return { issueKey, fixVersion };
 }
 
 module.exports = { setIssueFixVersionAndCreateFixVersion, updateIssueFixVersion, };

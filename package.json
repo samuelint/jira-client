@@ -1,6 +1,6 @@
 {
   "name": "chili-jira",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "main.js",
   "author": "Samuel Richard Magny",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "bundle-linux-x86": "pkg src/main.js -o out/jira-client-linux-x86 -t linux-x86"
   },
   "dependencies": {
+    "isomorphic-git": "^0.55.5",
     "minimist": "^1.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
