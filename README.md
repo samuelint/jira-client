@@ -13,7 +13,7 @@ Feel free to make improvements pull requests!
 
 ## Commands
 | Command | Note |
-| --- | --- | --- |
+| --- | --- |
 | `setIssueFixVersion --user <USER> --pass <API_TOKEN> --issueKey <JIRA_ISSUE_KEY> --fixVersion <VERSION_STRING>`   | None |
 | `extractIssuesFromCurrentBranch` | For a branch named `XYZ/ISSUE-12/blablabla/ISSUE-43/blabla`, `['ISSUE-12', 'ISSUE-43']` is going to be returned. |
 | `setCurrentBranchIssuesFixVersion --user <USER> --pass <API_TOKEN> --fixVersion <VERSION_STRING>` | For a branch named `XYZ/ISSUE-12/blablabla/ISSUE-43/blabla`, the `fixVersion` is going to be assigned to both `ISSUE-12` and `ISSUE-43`. |
