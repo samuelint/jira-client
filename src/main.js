@@ -1,6 +1,6 @@
 const minimist = require("minimist");
 const { setIssueFixVersionAndCreateFixVersion } = require("./service/jira-issues-service");
-const { setCurrentBranchIssuesFixVersion } = require("./service/jira-git-service");
+const { setCurrentBranchIssuesFixVersion, extractIssuesFromCurrentBranch } = require("./service/jira-git-service");
 
 const argv = process.argv.slice(2);
 
@@ -15,7 +15,6 @@ async function main(command, arguments) {
 
   switch(command) {
     case "setIssueFixVersion":
-
         returnValue = await setIssueFixVersionAndCreateFixVersion(auth, issueKey, fixVersion);
       break;
     case "extractIssuesFromCurrentBranch":
