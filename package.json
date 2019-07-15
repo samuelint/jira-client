@@ -9,8 +9,9 @@
     "bundle-linux-x64": "pkg src/main.js -o out/jira-client-linux-x64 -t linux-x64"
   },
   "dependencies": {
-    "lodash": "^4.17.13",
+    "async-mutex": "^0.1.3",
     "isomorphic-git": "^0.55.5",
+    "lodash": "^4.17.13",
     "minimist": "^1.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
